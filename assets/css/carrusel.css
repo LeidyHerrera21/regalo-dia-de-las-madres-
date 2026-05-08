@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f9cbd9;
+    /* Fondo de rayas rosadas */
+    background-image: linear-gradient(90deg, #ffb6c1 50%, transparent 50%);
+    background-size: 60px 100%;
+    overflow: hidden;
+}
+
+.gallery-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    gap: 20px;
+}
+
+.film-row {
+    width: 100%;
+    overflow: hidden; /* Oculta lo que sale de la pantalla */
+    position: relative;
+    display: flex;
+}
+
+.film-lane {
+    display: flex;
+    width: max-content; /* Importante para que el contenido no se amontone */
+}
+
+.film-strip {
+    display: flex;
+    gap: 15px;
+    padding: 10px 0;
+}
+
+/* Estilo del rollo de película */
+.film-strip img, .film-strip video {
+    height: 180px;
+    width: 280px;
+    object-fit: cover;
+    border-top: 15px solid #222;
+    border-bottom: 15px solid #222;
+    /* Efecto de perforaciones de película */
+    border-image: radial-gradient(#fff 30%, transparent 35%) 15% repeat;
+    background: #000;
+}
+
+/* ANIMACIONES */
+
+/* Fila 1 y 3 hacia la izquierda */
+.move-left .film-lane {
+    animation: scrollLeft 20s linear infinite;
+}
+
+/* Fila 2 hacia la derecha */
+.move-right .film-lane {
+    animation: scrollRight 20s linear infinite;
+}
+
+@keyframes scrollLeft {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* Se mueve la mitad (el bloque duplicado) */
+}
+
+@keyframes scrollRight {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+}
+
+/* Botón Continuar */
+.btn-continue {
+    position: absolute;
+    bottom: 20px;
+    right: 40px;
+    background: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: sans-serif;
+    z-index: 100;
+}
+

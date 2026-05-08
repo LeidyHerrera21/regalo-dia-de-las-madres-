@@ -1,0 +1,186 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f9cbd9; /* Color rosado de fondo */
+    background-image: radial-gradient(#ffb6c1 15%, transparent 16%);
+    background-size: 30px 30px; /* Efecto de puntos/corazones de fondo */
+    font-family: 'Comic Sans MS', 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.main-container {
+    position: relative;
+    width: 90%;
+    max-width: 1000px;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Tira de Fotos */
+.photo-strip {
+    position: absolute;
+    left: 0;
+    background-color: #331111; /* Color café oscuro del marco */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transform: rotate(-5deg);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+}
+
+.frame {
+    width: 100px;
+    height: 120px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Ventana de Correo */
+.message-window {
+    width: 400px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    overflow: hidden;
+    z-index: 10;
+}
+
+.window-header {
+    background: #f1f1f1;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    color: #666;
+    font-size: 0.9em;
+}
+
+.window-body {
+    padding: 20px;
+}
+
+.field {
+    margin: 5px 0;
+    color: #777;
+}
+
+hr { border: 0; border-top: 1px solid #eee; }
+
+.letter-content {
+    margin-top: 20px;
+    text-align: center;
+    color: #444;
+    line-height: 1.6;
+}
+
+.letter-footer {
+    position: relative;
+    margin-top: 30px;
+}
+
+.heart-icon {
+    width: 50px;
+    position: absolute;
+    right: 10px;
+    bottom: -10px;
+}
+
+/* Footer y Botones */
+.window-footer {
+    border-top: 1px solid #eee;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.send-btn {
+    background-color: #ffeff3;
+    border: 1px solid #ffccd5;
+    color: #ff4d6d;
+    padding: 5px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.continue-btn {
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+    background: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.corner-flower {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+
+    width: 140px; /* más grande */
+}
+
+
+
+/* FRAMES */
+.frame{
+    animation:floatPhoto 4s ease-in-out infinite;
+    transition:0.2s;
+}
+
+/* EFECTO HOVER */
+.frame:hover{
+    transform:scale(1.08) rotate(2deg);
+}
+
+/* IMAGEN */
+.frame img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:15px;
+}
+
+/* ANIMACION DIFERENTE PARA CADA FOTO */
+.frame:nth-child(2){
+    animation-delay:0.5s;
+}
+
+.frame:nth-child(3){
+    animation-delay:1s;
+}
+
+.frame:nth-child(4){
+    animation-delay:1.5s;
+}
+
+/* KEYFRAMES */
+@keyframes floatPhoto{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+}
