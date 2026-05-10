@@ -300,3 +300,247 @@ body{
     to { transform: translateY(-5px) rotate(2deg); }
 }
 
+/* ===================================== */
+/* RESPONSIVE COMPLETO */
+/* ===================================== */
+
+/* TABLETS */
+
+@media (max-width: 1024px){
+
+    .container-home{
+        width:95%;
+        gap:40px;
+    }
+
+    .title-top{
+        font-size:35px;
+        letter-spacing:8px;
+    }
+
+    .title-main{
+        font-size:85px;
+        line-height:85px;
+    }
+
+    .polaroid{
+        width:260px;
+    }
+
+    .polaroid img{
+        height:300px;
+    }
+
+    .cards{
+        gap:25px;
+    }
+
+    .card{
+        width:160px;
+        height:160px;
+    }
+
+    .flowers img{
+        height:70px;
+    }
+}
+
+/* CELULARES */
+
+@media (max-width: 768px){
+
+    body{
+        overflow-y:auto;
+    }
+
+    .screen{
+        height:auto;
+        min-height:100vh;
+
+        padding:30px 20px;
+    }
+
+    /* HOME */
+
+    .container-home{
+
+        flex-direction:column;
+
+        justify-content:center;
+        align-items:center;
+
+        text-align:center;
+
+        gap:40px;
+
+        padding:20px;
+    }
+
+    .left{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .title-top{
+        font-size:24px;
+        letter-spacing:5px;
+    }
+
+    .title-main{
+        font-size:60px;
+        line-height:65px;
+    }
+
+    .btn{
+        font-size:14px;
+        padding:12px 20px;
+    }
+
+    /* POLAROID */
+
+    .polaroid{
+
+        width:220px;
+
+        padding:12px 12px 55px;
+    }
+
+    .polaroid img{
+
+        height:250px;
+    }
+
+    .tape{
+
+        width:100px;
+        height:22px;
+    }
+
+    /* OPCIONES */
+
+    .options-container{
+        width:100%;
+    }
+
+    .options-title{
+
+        font-size:28px;
+
+        margin-bottom:35px;
+    }
+
+    .cards{
+
+        display:grid;
+
+        grid-template-columns:1fr 1fr;
+
+        gap:20px;
+
+        justify-items:center;
+    }
+
+    .card{
+
+        width:150px;
+        height:150px;
+    }
+
+    /* BOTON */
+
+    .next-btn{
+
+        right:20px;
+        bottom:20px;
+
+        font-size:13px;
+    }
+
+    /* FLORES */
+
+    .flowers{
+
+        padding:0 5px;
+    }
+
+    .flowers img{
+
+        height:55px;
+    }
+}
+
+/* CELULARES PEQUEÑOS */
+
+@media (max-width: 480px){
+
+    .screen{
+        padding:25px 15px;
+    }
+
+    .title-top{
+
+        font-size:18px;
+
+        letter-spacing:3px;
+    }
+
+    .title-main{
+
+        font-size:48px;
+
+        line-height:50px;
+    }
+
+    .polaroid{
+
+        width:190px;
+    }
+
+    .polaroid img{
+
+        height:210px;
+    }
+
+    /* TARJETAS */
+
+    .cards{
+
+        grid-template-columns:1fr;
+    }
+
+    .card{
+
+        width:180px;
+        height:180px;
+    }
+
+    .options-title{
+
+        font-size:22px;
+    }
+
+    /* FLORES */
+
+    .flowers{
+
+        gap:2px;
+
+        padding:0;
+    }
+
+    .flowers img{
+
+        height:42px;
+    }
+
+    /* BOTON */
+
+    .btn,
+    .next-btn{
+
+        font-size:12px;
+
+        padding:10px 16px;
+    }
+}
