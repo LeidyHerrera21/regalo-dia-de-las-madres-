@@ -102,3 +102,147 @@ body, html {
     background: #fdfdfd;
     transform: scale(1.05);
 }
+
+/* ===================================== */
+/* RESPONSIVE */
+/* ===================================== */
+
+@media (max-width: 1024px){
+
+    .monitor-container{
+        width:85%;
+    }
+
+    .ribbon{
+        width:100px;
+    }
+
+    .side-hearts{
+        width:120px;
+        right:-20px;
+    }
+}
+
+/* TABLETS */
+
+@media (max-width: 768px){
+
+    body,
+    html{
+        overflow-y:auto;
+    }
+
+    .background-pink{
+        padding:20px;
+        box-sizing:border-box;
+    }
+
+    .monitor-container{
+        width:100%;
+        max-width:600px;
+    }
+
+    .imac-body{
+        padding:15px;
+        border-radius:18px 18px 0 0;
+    }
+
+    .screen-frame{
+        aspect-ratio:16 / 10;
+    }
+
+    .imac-stand{
+        width:130px;
+        height:70px;
+    }
+
+    /* DECORACIONES */
+
+    .ribbon{
+        width:90px;
+        top:-20px;
+    }
+
+    .side-hearts{
+        width:100px;
+        right:-10px;
+        bottom:10px;
+    }
+
+    .garland{
+        width:100%;
+    }
+
+    /* BOTON */
+
+    .btn-continue{
+        bottom:20px;
+        right:20px;
+
+        padding:10px 18px;
+
+        font-size:13px;
+    }
+}
+
+/* CELULARES */
+
+@media (max-width: 480px){
+
+    .background-pink{
+        padding:15px;
+    }
+
+    .monitor-container{
+        width:100%;
+    }
+
+    .imac-body{
+        padding:10px;
+        border-radius:15px 15px 0 0;
+    }
+
+    .screen-frame{
+        aspect-ratio:16 / 11;
+    }
+
+    .imac-stand{
+        width:90px;
+        height:45px;
+    }
+
+    /* DECORACIONES */
+
+    .ribbon{
+        width:70px;
+        top:-12px;
+    }
+
+    .side-hearts{
+        width:70px;
+        right:-5px;
+        bottom:5px;
+    }
+
+    .garland{
+        top:0;
+    }
+
+    /* BOTON RESPONSIVE */
+
+    .btn-continue{
+
+        width:calc(100% - 30px);
+
+        left:15px;
+        right:15px;
+
+        bottom:15px;
+
+        padding:12px 0;
+
+        font-size:14px;
+
+        text-align:center;
+    }
+}

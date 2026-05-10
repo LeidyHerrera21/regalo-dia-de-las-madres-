@@ -82,3 +82,118 @@ body {
     z-index: 100;
 }
 
+
+/* ===================================== */
+/* RESPONSIVE */
+/* ===================================== */
+
+@media (max-width: 1024px){
+
+    .film-strip img,
+    .film-strip video{
+
+        width:220px;
+        height:150px;
+    }
+
+    .gallery-container{
+        gap:15px;
+    }
+}
+
+/* TABLETS */
+
+@media (max-width: 768px){
+
+    body{
+        overflow-y:auto;
+    }
+
+    .gallery-container{
+        height:auto;
+        min-height:100vh;
+
+        gap:12px;
+        padding:20px 0 80px;
+    }
+
+    .film-strip{
+        gap:10px;
+    }
+
+    .film-strip img,
+    .film-strip video{
+
+        width:180px;
+        height:120px;
+
+        border-top:10px solid #222;
+        border-bottom:10px solid #222;
+    }
+
+    /* BOTON */
+
+    .btn-continue{
+
+        bottom:15px;
+        right:15px;
+
+        padding:10px 18px;
+
+        font-size:14px;
+    }
+}
+
+/* CELULARES */
+
+@media (max-width: 480px){
+
+    body{
+        background-size:40px 100%;
+    }
+
+    .gallery-container{
+        gap:10px;
+        padding-bottom:90px;
+    }
+
+    .film-strip{
+        gap:8px;
+    }
+
+    .film-strip img,
+    .film-strip video{
+
+        width:140px;
+        height:95px;
+
+        border-top:8px solid #222;
+        border-bottom:8px solid #222;
+    }
+
+    /* ANIMACION MAS SUAVE EN CELULAR */
+
+    .move-left .film-lane,
+    .move-right .film-lane{
+
+        animation-duration:30s;
+    }
+
+    /* BOTON */
+
+    .btn-continue{
+
+        width:calc(100% - 30px);
+
+        right:15px;
+        left:15px;
+
+        bottom:15px;
+
+        text-align:center;
+
+        font-size:15px;
+
+        padding:12px 0;
+    }
+}

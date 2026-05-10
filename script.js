@@ -36,3 +36,11 @@ lanes.forEach(lane => {
         lane.style.animationPlayState = 'running';
     });
 });
+
+document.addEventListener("click", () => {
+
+    const music = document.getElementById("bg-music");
+
+    music.play();
+
+}, { once: true });
